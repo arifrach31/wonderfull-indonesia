@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="125" id="KGk-i7-Jjw" customClass="ShortProfileTableViewCell" customModule="WonderfullIndonesia" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTn-P6-rA1">
+                        <rect key="frame" x="16" y="0.0" width="288" height="115"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arif Rachman" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMc-y1-4sf">
+                                <rect key="frame" x="16" y="23.5" width="256" height="28"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcx-GI-PbE">
+                                <rect key="frame" x="16" y="66.5" width="256" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.25882352941176467" green="0.6588235294117647" blue="0.89803921568627454" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zMc-y1-4sf" secondAttribute="trailing" constant="16" id="GYl-PI-er6"/>
+                            <constraint firstAttribute="height" constant="115" id="T0L-kR-0VK"/>
+                            <constraint firstItem="zMc-y1-4sf" firstAttribute="leading" secondItem="LTn-P6-rA1" secondAttribute="leading" constant="16" id="V4A-X5-NI8"/>
+                            <constraint firstItem="hcx-GI-PbE" firstAttribute="leading" secondItem="LTn-P6-rA1" secondAttribute="leading" constant="16" id="X9T-ot-AZJ"/>
+                            <constraint firstItem="zMc-y1-4sf" firstAttribute="centerY" secondItem="LTn-P6-rA1" secondAttribute="centerY" constant="-20" id="aW4-oa-G2i"/>
+                            <constraint firstAttribute="trailing" secondItem="hcx-GI-PbE" secondAttribute="trailing" constant="16" id="dlY-aP-ry4"/>
+                            <constraint firstItem="hcx-GI-PbE" firstAttribute="top" secondItem="zMc-y1-4sf" secondAttribute="bottom" constant="15" id="nNc-Mf-bjY"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LTn-P6-rA1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Cpk-pc-2cf"/>
+                    <constraint firstAttribute="bottom" secondItem="LTn-P6-rA1" secondAttribute="bottom" id="XM0-Yn-E6B"/>
+                    <constraint firstItem="LTn-P6-rA1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="qKM-6n-OxA"/>
+                    <constraint firstAttribute="trailing" secondItem="LTn-P6-rA1" secondAttribute="trailing" constant="16" id="spC-W2-D62"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="lblJob" destination="hcx-GI-PbE" id="cpH-8q-tRA"/>
+                <outlet property="lblName" destination="zMc-y1-4sf" id="6RG-Yc-dc1"/>
+                <outlet property="viewBox" destination="LTn-P6-rA1" id="app-Q7-Mu6"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="100.78125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

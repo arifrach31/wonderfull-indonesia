@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="186" id="KGk-i7-Jjw" customClass="PhotoTableViewCell" customModule="WonderfullIndonesia" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="218" height="186"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="218" height="186"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3n2-jr-iPF">
+                        <rect key="frame" x="34" y="18" width="150" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="B6F-Sf-tle"/>
+                            <constraint firstAttribute="height" constant="150" id="K0w-g3-zUL"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="75"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3n2-jr-iPF" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="1k8-8t-uSr"/>
+                    <constraint firstItem="3n2-jr-iPF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="AtK-SO-j6U"/>
+                    <constraint firstAttribute="bottom" secondItem="3n2-jr-iPF" secondAttribute="bottom" constant="18" id="onU-aG-jkv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="imgPhoto" destination="3n2-jr-iPF" id="uKe-fa-Q2p"/>
+            </connections>
+            <point key="canvasLocation" x="30.434782608695656" y="121.20535714285714"/>
+        </tableViewCell>
+    </objects>
+</document>

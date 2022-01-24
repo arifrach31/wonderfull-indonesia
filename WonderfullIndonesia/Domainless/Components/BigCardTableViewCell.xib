@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="222" id="KGk-i7-Jjw" customClass="BigCardTableViewCell" customModule="WonderfullIndonesia" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="223"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="223"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ON-ev-TaX">
+                        <rect key="frame" x="16" y="16" width="288" height="191"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the best place to visit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P46-rW-BY5">
+                                <rect key="frame" x="16" y="65" width="256" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.74606591460000005" green="0.87654143569999998" blue="0.97256606820000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjv-wk-PYq">
+                                <rect key="frame" x="74" y="107" width="140" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Hi5-AW-9JZ"/>
+                                    <constraint firstAttribute="width" constant="140" id="MDf-75-dh5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Start Now">
+                                    <color key="titleColor" red="0.26929402349999998" green="0.45833164450000002" blue="0.65100723510000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapBtnCard:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FYu-m7-nU8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Discover Around" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAF-hN-gBl">
+                                <rect key="frame" x="16" y="35" width="256" height="21.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18431372549019609" green="0.65490196078431373" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="CAF-hN-gBl" firstAttribute="leading" secondItem="0ON-ev-TaX" secondAttribute="leading" constant="16" id="6N2-wz-uN2"/>
+                            <constraint firstItem="fjv-wk-PYq" firstAttribute="top" secondItem="P46-rW-BY5" secondAttribute="bottom" constant="25" id="8LS-6T-w3G"/>
+                            <constraint firstAttribute="trailing" secondItem="P46-rW-BY5" secondAttribute="trailing" constant="16" id="Fgg-J2-yil"/>
+                            <constraint firstItem="P46-rW-BY5" firstAttribute="top" secondItem="CAF-hN-gBl" secondAttribute="bottom" constant="8.5" id="JF0-ep-y6v"/>
+                            <constraint firstAttribute="trailing" secondItem="CAF-hN-gBl" secondAttribute="trailing" constant="16" id="Ukj-es-X9O"/>
+                            <constraint firstItem="fjv-wk-PYq" firstAttribute="centerX" secondItem="0ON-ev-TaX" secondAttribute="centerX" id="XUt-cZ-n2Z"/>
+                            <constraint firstItem="CAF-hN-gBl" firstAttribute="top" secondItem="0ON-ev-TaX" secondAttribute="top" constant="35" id="Z87-8C-Ihv"/>
+                            <constraint firstAttribute="bottom" secondItem="fjv-wk-PYq" secondAttribute="bottom" constant="39" id="lYc-4D-fxW"/>
+                            <constraint firstItem="P46-rW-BY5" firstAttribute="leading" secondItem="0ON-ev-TaX" secondAttribute="leading" constant="16" id="pdx-Od-4hS"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="32"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="0ON-ev-TaX" secondAttribute="trailing" constant="16" id="3ct-xw-Kyz"/>
+                    <constraint firstAttribute="bottom" secondItem="0ON-ev-TaX" secondAttribute="bottom" constant="16" id="CKV-UC-htK"/>
+                    <constraint firstItem="0ON-ev-TaX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="JkM-kb-8Rd"/>
+                    <constraint firstItem="0ON-ev-TaX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="cX8-Vv-qb1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="btnCard" destination="fjv-wk-PYq" id="e4e-XZ-aHY"/>
+                <outlet property="lblDesc" destination="P46-rW-BY5" id="1dX-VT-lYr"/>
+                <outlet property="lblTitle" destination="CAF-hN-gBl" id="qU8-UN-Cee"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="157.36607142857142"/>
+        </tableViewCell>
+    </objects>
+</document>

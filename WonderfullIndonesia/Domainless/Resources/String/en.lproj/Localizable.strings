@@ -1,0 +1,18 @@
+// Key : Snakecase & lowercase
+// Value : Titlecase / Sentencecase
+
+"title" = "Wonderfull Indonesia";
+"ok" = "Ok";
+"success" = "Success";
+"failed" = "Failed";
+"error_connection" = "Error Connection";
+"error_json" = "Error JSON";
+"error_format" = "Error Format";
+"home" = "Home";
+"favorit" = "Favorit";
+"about" = "About";
+"search" = "Search Destination";
+"recomendation" = "Recomendation";
+"favorite_destination" = "Favorite Destination";
+"find_destination" = "Find Your Best Destination";
+"destination_not_found" = "Destination Not Found";
