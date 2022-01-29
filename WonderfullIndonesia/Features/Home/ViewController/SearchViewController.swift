@@ -15,11 +15,11 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
   
   @IBOutlet weak var tableView: UITableView!
 
-  let searchBar: UISearchBar = UISearchBar()
-
-  private let viewModel: HomeViewModel
-  private let disposeBag = DisposeBag()
+  private let searchBar: UISearchBar = UISearchBar()
   private let backgroundColorLayer = UIColor.gradientColorPrimary
+  
+  private let disposeBag = DisposeBag()
+  private let viewModel: HomeViewModel
 
   init(viewModel: HomeViewModel) {
     self.viewModel = viewModel

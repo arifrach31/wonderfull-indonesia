@@ -14,10 +14,21 @@ import SVProgressHUD
 class HomeViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
 
-  private let viewModel = HomeViewModel()
-  private let disposeBag = DisposeBag()
   private let backgroundColorLayer = UIColor.gradientColorPrimary
+  
+  private let disposeBag = DisposeBag()
+  private let viewModel: HomeViewModel
+  
+  init(viewModel: HomeViewModel) {
+    self.viewModel = viewModel
 
+    super.init(nibName: "HomeViewController", bundle: nil)
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 
