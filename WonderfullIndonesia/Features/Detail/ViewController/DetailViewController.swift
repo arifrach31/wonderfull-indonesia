@@ -19,12 +19,13 @@ class DetailViewController: UIViewController {
   @IBOutlet weak var imgFavorite: UIImageView!
   
   private let place: Place?
-  private let viewModel = HomeViewModel()
+  private let viewModel: DetailViewModel
   private let disposeBag = DisposeBag()
   private let backgroundColorLayer = UIColor.gradientColorPrimary
 
-  init(place: Place?) {
+  init(place: Place?, viewModel: DetailViewModel) {
     self.place = place
+    self.viewModel = viewModel
 
     super.init(nibName: "DetailViewController", bundle: nil)
     hidesBottomBarWhenPushed = true
@@ -98,7 +99,8 @@ class DetailViewController: UIViewController {
   }
 
   @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
-    let isFav = viewModel.handleDestinationFav(place?.id ?? 0)
+    guard let destination = viewModel.interactor.currentDestination() else { return }
+    let isFav = viewModel.interactor.handleDestinationFav(id: place?.id ?? 0, destination: destination)
     imgFavorite.image = !isFav ? UIImage.iconIsFavoritActive : UIImage.iconIsFavoritInactive
   }
 }

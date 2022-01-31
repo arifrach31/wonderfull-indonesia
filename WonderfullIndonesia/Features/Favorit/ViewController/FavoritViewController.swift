@@ -16,9 +16,9 @@ class FavoritViewController: UIViewController {
   private let backgroundColorLayer = UIColor.gradientColorPrimary
   
   private let disposeBag = DisposeBag()
-  private let viewModel: HomeViewModel
+  private let viewModel: FavoriteViewModel
   
-  init(viewModel: HomeViewModel) {
+  init(viewModel: FavoriteViewModel) {
     self.viewModel = viewModel
 
     super.init(nibName: "FavoritViewController", bundle: nil)
@@ -61,13 +61,13 @@ class FavoritViewController: UIViewController {
       }).disposed(by: disposeBag)
   }
 
-  func navigateToSearch(_ viewModel: HomeViewModel) {
+  func navigateToSearch(_ viewModel: SearchViewModel) {
     let vc = SearchViewController(viewModel: viewModel)
     self.navigationController?.pushViewController(vc, animated: false)
   }
 
   func navigateToDetail(_ place: Place) {
-    let vc = DetailViewController(place: place)
+    let vc = DetailViewController(place: place, viewModel: DetailViewModel())
     self.navigationController?.pushViewController(vc, animated: false)
   }
 }
@@ -77,7 +77,8 @@ extension FavoritViewController: UITableViewDataSource {
     if viewModel.isEmptyResult(viewModel.countFavoritDestination) {
       return 1
     }
-    let data = Destination.current?.places?.filter({ $0.isFavorit })
+    guard let destination = viewModel.interactor.currentDestination() else { return 0 }
+    let data = destination.places?.filter({ $0.isFavorit })
     return data?.count ?? 0
   }
 
@@ -88,17 +89,17 @@ extension FavoritViewController: UITableViewDataSource {
       cell.lblEmpty.textColor = .greyColor
       cell.btnEmpty.isHidden = false
       cell.selectionHandler = { [weak self] in
-        guard let viewModel = self?.viewModel else { return }
-        self?.navigateToSearch(viewModel)
+        self?.navigateToSearch(SearchViewModel())
       }
       return cell
     } else {
       let cell: CardItemTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-      let data = Destination.current?.places?.filter({ $0.isFavorit })
+      guard let destination = viewModel.interactor.currentDestination() else { return cell }
+      let data = destination.places?.filter({ $0.isFavorit })
       cell.item = data?[indexPath.row]
       cell.selectionHandler = { [weak self] (id) in
         guard let id = id else { return }
-        _ = self?.viewModel.handleDestinationFav(id)
+        _ = self?.viewModel.interactor.handleDestinationFav(id: id, destination: destination)
       }
       cell.selectionStyle = .none
       return cell
@@ -108,7 +109,7 @@ extension FavoritViewController: UITableViewDataSource {
 
 extension FavoritViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let data = Destination.current?.places?.filter({ $0.isFavorit })
+    let data = viewModel.interactor.currentDestination()?.places?.filter({ $0.isFavorit })
     guard let place = data?[indexPath.row] else { return }
     self.navigateToDetail(place)
   }

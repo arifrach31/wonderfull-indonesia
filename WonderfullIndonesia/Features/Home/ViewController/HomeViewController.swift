@@ -81,8 +81,8 @@ class HomeViewController: UIViewController {
     viewModel.destination.asObservable().subscribe(onNext: { [weak self] response in
       guard let result = response else { return }
 
-      result.save()
       Persistent.shared.set(key: .firstInstall, value: "ok".localized())
+      self?.viewModel.interactor.save(destination: result)
       self?.tableView.reloadData()
     }).disposed(by: disposeBag)
 
@@ -92,13 +92,13 @@ class HomeViewController: UIViewController {
       }).disposed(by: disposeBag)
   }
 
-  public func navigateToSearch(_ viewModel: HomeViewModel) {
+  public func navigateToSearch(_ viewModel: SearchViewModel) {
     let vc = SearchViewController(viewModel: viewModel)
     self.navigationController?.pushViewController(vc, animated: false)
   }
 
   public func navigateToDetail(_ place: Place) {
-    let vc = DetailViewController(place: place)
+    let vc = DetailViewController(place: place, viewModel: DetailViewModel())
     self.navigationController?.pushViewController(vc, animated: false)
   }
 }
@@ -117,16 +117,16 @@ extension HomeViewController:  UITableViewDataSource {
     case 0:
       let cell: BigCardTableViewCell = tableView.dequeueReusableCell(for: indexPath)
       cell.selectionHandler = { [weak self] in
-        guard let viewModel = self?.viewModel else { return }
-        self?.navigateToSearch(viewModel)
+        self?.navigateToSearch(SearchViewModel())
       }
       return cell
     default:
       let cell: DestinationTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-      cell.destination = Destination.current
+      cell.destination = viewModel.interactor.currentDestination()
       cell.itemFavoriteHandler = { [weak self] (id) in
         guard let id = id else { return }
-        _ = self?.viewModel.handleDestinationFav(id)
+        guard let destination = self?.viewModel.interactor.currentDestination() else { return }
+        _ = self?.viewModel.interactor.handleDestinationFav(id: id, destination: destination)
       }
       cell.itemSelectionHandler = { [weak self] (place) in
         guard let place = place else { return }

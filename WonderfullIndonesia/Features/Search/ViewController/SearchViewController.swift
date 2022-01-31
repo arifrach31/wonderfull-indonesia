@@ -19,9 +19,9 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
   private let backgroundColorLayer = UIColor.gradientColorPrimary
   
   private let disposeBag = DisposeBag()
-  private let viewModel: HomeViewModel
+  private let viewModel: SearchViewModel
 
-  init(viewModel: HomeViewModel) {
+  init(viewModel: SearchViewModel) {
     self.viewModel = viewModel
 
     super.init(nibName: "SearchViewController", bundle: nil)
@@ -80,7 +80,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     viewModel.searchText.asObservable().subscribe(onNext: { [weak self] response in
       guard let result = response else { return }
       if result.count >= 3 {
-        let destination = Destination.current?.places?.filter{ (data) -> Bool in
+        let destination = self?.viewModel.interactor.currentDestination()?.places?.filter{ (data) -> Bool in
           data.name?.lowercased().contains(result) ?? false
         }
         self?.viewModel.searchDestination.accept(destination)
@@ -91,7 +91,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
 
     NotificationCenter.default.rx
       .notification(Notifications.favoritNotifications).subscribe(onNext: {[weak self] _ in
-        self?.tableView.reloadData()
+        let destination = self?.viewModel.interactor.currentDestination()?.places?.filter{ (data) -> Bool in
+          data.name?.lowercased().contains(self?.viewModel.searchText.value ?? "") ?? false
+        }
+        self?.viewModel.searchDestination.accept(destination)
       }).disposed(by: disposeBag)
   }
 
@@ -130,7 +133,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
   }
 
   func navigateToDetail(_ place: Place) {
-    let vc = DetailViewController(place: place)
+    let vc = DetailViewController(place: place, viewModel: DetailViewModel())
     self.navigationController?.pushViewController(vc, animated: false)
   }
 }

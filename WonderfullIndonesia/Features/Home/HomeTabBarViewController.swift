@@ -37,7 +37,7 @@ class HomeTabBarViewController: UITabBarController {
     tabBar.barTintColor = .white
     
     let homeController = createTabController(vc: HomeViewController(viewModel: HomeViewModel()), active: UIImage.iconHomeActive!, inactive: UIImage.iconHomeInactive!)
-    let favoritController = createTabController(vc: FavoritViewController(viewModel: HomeViewModel()), active: UIImage.iconFavoritActive!, inactive: UIImage.iconFavoritInactive!)
+    let favoritController = createTabController(vc: FavoritViewController(viewModel: FavoriteViewModel()), active: UIImage.iconFavoritActive!, inactive: UIImage.iconFavoritInactive!)
     let accountController = createTabController(vc: AboutViewController(viewModel: AboutViewModel()), active: UIImage.iconAboutActive!, inactive: UIImage.iconAboutInactive!)
     
     viewControllers = [homeController, favoritController, accountController]
