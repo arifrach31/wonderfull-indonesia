@@ -30,26 +30,6 @@ struct Destination: Mappable {
     count <- map["count"]
     places <- map["places"]
   }
-
-  public func save() {
-    if let jsonString = self.toJSONString() {
-      Persistent.shared.set(key: .destination, value: jsonString)
-      Notifications.favoritNotifications.post()
-    }
-  }
-
-  public static func clear() {
-    Persistent.shared.delete(key: .destination)
-  }
-
-  public static var current: Destination? {
-    guard let destinationString = Persistent.shared.get(key: .destination),
-      let destination = Destination(JSONString: destinationString) else {
-      return nil
-    }
-
-    return destination
-  }
 }
 
 // MARK: - Place
