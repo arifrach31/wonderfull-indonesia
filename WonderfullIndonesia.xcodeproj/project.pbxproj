@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1109DE4D279BFA0700B62295 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1109DE4C279BFA0700B62295 /* Utils.swift */; };
-		1109DE52279C16B800B62295 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1109DE50279C16B800B62295 /* SearchViewController.swift */; };
-		1109DE53279C16B800B62295 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1109DE51279C16B800B62295 /* SearchViewController.xib */; };
 		1109DE58279C6B0B00B62295 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1109DE56279C6B0B00B62295 /* EmptyTableViewCell.swift */; };
 		1109DE59279C6B0B00B62295 /* EmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1109DE57279C6B0B00B62295 /* EmptyTableViewCell.xib */; };
 		1109DE5C279CD50D00B62295 /* CardItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1109DE5A279CD50C00B62295 /* CardItemTableViewCell.swift */; };
@@ -46,6 +44,8 @@
 		118EBCBA27A596580018EA64 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EBCB927A596580018EA64 /* SearchViewModel.swift */; };
 		118EBCBD27A598350018EA64 /* FavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EBCBC27A598350018EA64 /* FavoriteInteractor.swift */; };
 		118EBCC027A60ECE0018EA64 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EBCBF27A60ECE0018EA64 /* DetailViewModel.swift */; };
+		118EBCC527A7EF9A0018EA64 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118EBCC327A7EF9A0018EA64 /* SearchViewController.swift */; };
+		118EBCC627A7EF9A0018EA64 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 118EBCC427A7EF9A0018EA64 /* SearchViewController.xib */; };
 		11BCB5BD26CF96A5006E72FE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11BCB5BF26CF96A5006E72FE /* Localizable.strings */; };
 		11DBE63C23E2A9980050937F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DBE63B23E2A9980050937F /* UIColor.swift */; };
 		7F36ED20F4912D2EE12527EF /* Pods_WonderfullIndonesia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7CD3816EC1072CFD214FC7 /* Pods_WonderfullIndonesia.framework */; };
@@ -70,8 +70,6 @@
 
 /* Begin PBXFileReference section */
 		1109DE4C279BFA0700B62295 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		1109DE50279C16B800B62295 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		1109DE51279C16B800B62295 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		1109DE56279C6B0B00B62295 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
 		1109DE57279C6B0B00B62295 /* EmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableViewCell.xib; sourceTree = "<group>"; };
 		1109DE5A279CD50C00B62295 /* CardItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -108,6 +106,8 @@
 		118EBCB927A596580018EA64 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		118EBCBC27A598350018EA64 /* FavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInteractor.swift; sourceTree = "<group>"; };
 		118EBCBF27A60ECE0018EA64 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		118EBCC327A7EF9A0018EA64 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		118EBCC427A7EF9A0018EA64 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		11BCB5BE26CF96A5006E72FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		11DBE63B23E2A9980050937F /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		36E9D71476A825C354E85AD5 /* Pods-WonderfullIndonesia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderfullIndonesia.release.xcconfig"; path = "Target Support Files/Pods-WonderfullIndonesia/Pods-WonderfullIndonesia.release.xcconfig"; sourceTree = "<group>"; };
@@ -303,8 +303,8 @@
 		118EBCB727A595D10018EA64 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1109DE50279C16B800B62295 /* SearchViewController.swift */,
-				1109DE51279C16B800B62295 /* SearchViewController.xib */,
+				118EBCC327A7EF9A0018EA64 /* SearchViewController.swift */,
+				118EBCC427A7EF9A0018EA64 /* SearchViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -544,7 +544,6 @@
 				1109DE65279CFCAF00B62295 /* FavoritViewController.xib in Resources */,
 				1109DE5D279CD50D00B62295 /* CardItemTableViewCell.xib in Resources */,
 				1109DE59279C6B0B00B62295 /* EmptyTableViewCell.xib in Resources */,
-				1109DE53279C16B800B62295 /* SearchViewController.xib in Resources */,
 				114E5823278A5AAD0013D38E /* BigCardTableViewCell.xib in Resources */,
 				1109DE8D279E56DB00B62295 /* ShortProfileTableViewCell.xib in Resources */,
 				114E5839278A6F7C0013D38E /* DestinationTableViewCell.xib in Resources */,
@@ -553,6 +552,7 @@
 				11BCB5BD26CF96A5006E72FE /* Localizable.strings in Resources */,
 				1109DE77279D6B4D00B62295 /* OverviewTableViewCell.xib in Resources */,
 				9EF9905123CDBE73005AD51E /* LaunchScreen.storyboard in Resources */,
+				118EBCC627A7EF9A0018EA64 /* SearchViewController.xib in Resources */,
 				1109DE7D279E4B6400B62295 /* AboutViewController.xib in Resources */,
 				114E581B278959F30013D38E /* HomeViewController.xib in Resources */,
 			);
@@ -614,7 +614,6 @@
 				9EF9904C23CDBE73005AD51E /* NetfoxService.swift in Sources */,
 				9EF9905623CDBE73005AD51E /* Encryption.swift in Sources */,
 				118EBCBD27A598350018EA64 /* FavoriteInteractor.swift in Sources */,
-				1109DE52279C16B800B62295 /* SearchViewController.swift in Sources */,
 				9EF9904B23CDBE73005AD51E /* APIError.swift in Sources */,
 				1109DE6C279D252600B62295 /* DetailViewController.swift in Sources */,
 				1125B70C23E820300015720C /* UIImage.swift in Sources */,
@@ -637,6 +636,7 @@
 				118EBCC027A60ECE0018EA64 /* DetailViewModel.swift in Sources */,
 				1109DE87279E532300B62295 /* About.swift in Sources */,
 				118EBCB527A594790018EA64 /* FavoriteViewModel.swift in Sources */,
+				118EBCC527A7EF9A0018EA64 /* SearchViewController.swift in Sources */,
 				9EF9904D23CDBE73005AD51E /* NetworkService.swift in Sources */,
 				1109DE81279E4FCB00B62295 /* PhotoTableViewCell.swift in Sources */,
 				114E5829278A63BF0013D38E /* HeaderTableViewCell.swift in Sources */,
