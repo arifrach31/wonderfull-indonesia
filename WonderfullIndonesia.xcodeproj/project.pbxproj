@@ -48,10 +48,9 @@
 		118EBCC627A7EF9A0018EA64 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 118EBCC427A7EF9A0018EA64 /* SearchViewController.xib */; };
 		11BCB5BD26CF96A5006E72FE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11BCB5BF26CF96A5006E72FE /* Localizable.strings */; };
 		11DBE63C23E2A9980050937F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DBE63B23E2A9980050937F /* UIColor.swift */; };
-		7F36ED20F4912D2EE12527EF /* Pods_WonderfullIndonesia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7CD3816EC1072CFD214FC7 /* Pods_WonderfullIndonesia.framework */; };
 		9E371A5823E3260F0005F269 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E371A5723E3260F0005F269 /* UIViewController.swift */; };
-		9E7372FF23E80DCD00C6C207 /* (null) in Sources */ = {isa = PBXBuildFile; };
-		9E73730023E80E0300C6C207 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		9E7372FF23E80DCD00C6C207 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		9E73730023E80E0300C6C207 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		9E73CD8723E9781F0024C16D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E73CD8123E9781F0024C16D /* Assets.xcassets */; };
 		9EF9904B23CDBE73005AD51E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF9902C23CDBE73005AD51E /* APIError.swift */; };
 		9EF9904C23CDBE73005AD51E /* NetfoxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF9902D23CDBE73005AD51E /* NetfoxService.swift */; };
@@ -110,9 +109,7 @@
 		118EBCC427A7EF9A0018EA64 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		11BCB5BE26CF96A5006E72FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		11DBE63B23E2A9980050937F /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
-		36E9D71476A825C354E85AD5 /* Pods-WonderfullIndonesia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderfullIndonesia.release.xcconfig"; path = "Target Support Files/Pods-WonderfullIndonesia/Pods-WonderfullIndonesia.release.xcconfig"; sourceTree = "<group>"; };
 		4274E6A423BECA3200C38973 /* WonderfullIndonesia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WonderfullIndonesia.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A7CD3816EC1072CFD214FC7 /* Pods_WonderfullIndonesia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WonderfullIndonesia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E371A5723E3260F0005F269 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		9E73CD8123E9781F0024C16D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EF9902C23CDBE73005AD51E /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -130,7 +127,6 @@
 		9EF9903B23CDBE73005AD51E /* Encryption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encryption.swift; sourceTree = "<group>"; };
 		9EF9903C23CDBE73005AD51E /* Persistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistent.swift; sourceTree = "<group>"; };
 		9EF9903F23CDBE73005AD51E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7A83E109022D77D6DB7AF5C /* Pods-WonderfullIndonesia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonderfullIndonesia.debug.xcconfig"; path = "Target Support Files/Pods-WonderfullIndonesia/Pods-WonderfullIndonesia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +134,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F36ED20F4912D2EE12527EF /* Pods_WonderfullIndonesia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,8 +339,6 @@
 		3689E8774F5B370AC4CEB2E8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E7A83E109022D77D6DB7AF5C /* Pods-WonderfullIndonesia.debug.xcconfig */,
-				36E9D71476A825C354E85AD5 /* Pods-WonderfullIndonesia.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -356,7 +349,6 @@
 				9EF9901E23CDBE73005AD51E /* WonderfullIndonesia */,
 				4274E6A523BECA3200C38973 /* Products */,
 				3689E8774F5B370AC4CEB2E8 /* Pods */,
-				CC308EF3627D4A8FFBB861F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -469,14 +461,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		CC308EF3627D4A8FFBB861F5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4A7CD3816EC1072CFD214FC7 /* Pods_WonderfullIndonesia.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -484,11 +468,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4274E6CC23BECA3300C38973 /* Build configuration list for PBXNativeTarget "WonderfullIndonesia" */;
 			buildPhases = (
-				E6AB9B3F26ACFAB1E5DB7D32 /* [CP] Check Pods Manifest.lock */,
 				4274E6A023BECA3200C38973 /* Sources */,
 				4274E6A123BECA3200C38973 /* Frameworks */,
 				4274E6A223BECA3200C38973 /* Resources */,
-				849B110041290AFEC184E618 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -560,48 +542,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		849B110041290AFEC184E618 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WonderfullIndonesia/Pods-WonderfullIndonesia-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WonderfullIndonesia/Pods-WonderfullIndonesia-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WonderfullIndonesia/Pods-WonderfullIndonesia-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E6AB9B3F26ACFAB1E5DB7D32 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WonderfullIndonesia-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		4274E6A023BECA3200C38973 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -619,7 +559,7 @@
 				1125B70C23E820300015720C /* UIImage.swift in Sources */,
 				9EF9905423CDBE73005AD51E /* KeychainSwift.swift in Sources */,
 				11DBE63C23E2A9980050937F /* UIColor.swift in Sources */,
-				9E7372FF23E80DCD00C6C207 /* (null) in Sources */,
+				9E7372FF23E80DCD00C6C207 /* BuildFile in Sources */,
 				9EF9904E23CDBE73005AD51E /* ApiFactory.swift in Sources */,
 				114E5822278A5AAD0013D38E /* BigCardTableViewCell.swift in Sources */,
 				1109DE4D279BFA0700B62295 /* Utils.swift in Sources */,
@@ -629,7 +569,7 @@
 				9EF9905523CDBE73005AD51E /* Notifications.swift in Sources */,
 				9EF9905023CDBE73005AD51E /* UserDefaults.swift in Sources */,
 				114E581A278959F30013D38E /* HomeViewController.swift in Sources */,
-				9E73730023E80E0300C6C207 /* (null) in Sources */,
+				9E73730023E80E0300C6C207 /* BuildFile in Sources */,
 				1109DE8C279E56DB00B62295 /* ShortProfileTableViewCell.swift in Sources */,
 				9E371A5823E3260F0005F269 /* UIViewController.swift in Sources */,
 				9EF9905723CDBE73005AD51E /* Persistent.swift in Sources */,
@@ -785,7 +725,6 @@
 		};
 		4274E6CD23BECA3300C38973 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7A83E109022D77D6DB7AF5C /* Pods-WonderfullIndonesia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -811,7 +750,6 @@
 		};
 		4274E6CE23BECA3300C38973 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36E9D71476A825C354E85AD5 /* Pods-WonderfullIndonesia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
