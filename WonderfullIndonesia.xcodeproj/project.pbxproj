@@ -27,6 +27,8 @@
 		1109DE8C279E56DB00B62295 /* ShortProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1109DE8A279E56DB00B62295 /* ShortProfileTableViewCell.swift */; };
 		1109DE8D279E56DB00B62295 /* ShortProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1109DE8B279E56DB00B62295 /* ShortProfileTableViewCell.xib */; };
 		1125B70C23E820300015720C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125B70B23E820300015720C /* UIImage.swift */; };
+		11423EA627AE99EF00EE9C6F /* WonderfullIndonesiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11423EA527AE99EF00EE9C6F /* WonderfullIndonesiaUITests.swift */; };
+		11423EA827AE99EF00EE9C6F /* WonderfullIndonesiaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11423EA727AE99EF00EE9C6F /* WonderfullIndonesiaUITestsLaunchTests.swift */; };
 		114E5817278943DA0013D38E /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E5816278943DA0013D38E /* HomeTabBarViewController.swift */; };
 		114E581A278959F30013D38E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114E5818278959F30013D38E /* HomeViewController.swift */; };
 		114E581B278959F30013D38E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 114E5819278959F30013D38E /* HomeViewController.xib */; };
@@ -49,8 +51,8 @@
 		11BCB5BD26CF96A5006E72FE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11BCB5BF26CF96A5006E72FE /* Localizable.strings */; };
 		11DBE63C23E2A9980050937F /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DBE63B23E2A9980050937F /* UIColor.swift */; };
 		9E371A5823E3260F0005F269 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E371A5723E3260F0005F269 /* UIViewController.swift */; };
-		9E7372FF23E80DCD00C6C207 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
-		9E73730023E80E0300C6C207 /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		9E7372FF23E80DCD00C6C207 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		9E73730023E80E0300C6C207 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		9E73CD8723E9781F0024C16D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E73CD8123E9781F0024C16D /* Assets.xcassets */; };
 		9EF9904B23CDBE73005AD51E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF9902C23CDBE73005AD51E /* APIError.swift */; };
 		9EF9904C23CDBE73005AD51E /* NetfoxService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF9902D23CDBE73005AD51E /* NetfoxService.swift */; };
@@ -67,6 +69,16 @@
 		9EF9905723CDBE73005AD51E /* Persistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF9903C23CDBE73005AD51E /* Persistent.swift */; };
 		E286CAD99FDF0C24860F61C5 /* Pods_WonderfullIndonesia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038342D4134F72BC1A012EB5 /* Pods_WonderfullIndonesia.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		11423EA927AE99EF00EE9C6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4274E69C23BECA3200C38973 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4274E6A323BECA3200C38973;
+			remoteInfo = WonderfullIndonesia;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		038342D4134F72BC1A012EB5 /* Pods_WonderfullIndonesia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WonderfullIndonesia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +102,9 @@
 		1109DE8A279E56DB00B62295 /* ShortProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortProfileTableViewCell.swift; sourceTree = "<group>"; };
 		1109DE8B279E56DB00B62295 /* ShortProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShortProfileTableViewCell.xib; sourceTree = "<group>"; };
 		1125B70B23E820300015720C /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		11423EA327AE99EF00EE9C6F /* WonderfullIndonesiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WonderfullIndonesiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11423EA527AE99EF00EE9C6F /* WonderfullIndonesiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonderfullIndonesiaUITests.swift; sourceTree = "<group>"; };
+		11423EA727AE99EF00EE9C6F /* WonderfullIndonesiaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonderfullIndonesiaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		114E5816278943DA0013D38E /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		114E5818278959F30013D38E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		114E5819278959F30013D38E /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -134,6 +149,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		11423EA027AE99EF00EE9C6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4274E6A123BECA3200C38973 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,6 +249,15 @@
 				1109DE84279E52F100B62295 /* AboutViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		11423EA427AE99EF00EE9C6F /* WonderfullIndonesiaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				11423EA527AE99EF00EE9C6F /* WonderfullIndonesiaUITests.swift */,
+				11423EA727AE99EF00EE9C6F /* WonderfullIndonesiaUITestsLaunchTests.swift */,
+			);
+			path = WonderfullIndonesiaUITests;
 			sourceTree = "<group>";
 		};
 		114E5815278943C70013D38E /* Home */ = {
@@ -354,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				9EF9901E23CDBE73005AD51E /* WonderfullIndonesia */,
+				11423EA427AE99EF00EE9C6F /* WonderfullIndonesiaUITests */,
 				4274E6A523BECA3200C38973 /* Products */,
 				3689E8774F5B370AC4CEB2E8 /* Pods */,
 				B59BD3DDF62CE06D2C793A00 /* Frameworks */,
@@ -364,6 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				4274E6A423BECA3200C38973 /* WonderfullIndonesia.app */,
+				11423EA327AE99EF00EE9C6F /* WonderfullIndonesiaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -480,6 +513,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		11423EA227AE99EF00EE9C6F /* WonderfullIndonesiaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11423EAD27AE99EF00EE9C6F /* Build configuration list for PBXNativeTarget "WonderfullIndonesiaUITests" */;
+			buildPhases = (
+				11423E9F27AE99EF00EE9C6F /* Sources */,
+				11423EA027AE99EF00EE9C6F /* Frameworks */,
+				11423EA127AE99EF00EE9C6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11423EAA27AE99EF00EE9C6F /* PBXTargetDependency */,
+			);
+			name = WonderfullIndonesiaUITests;
+			productName = WonderfullIndonesiaUITests;
+			productReference = 11423EA327AE99EF00EE9C6F /* WonderfullIndonesiaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		4274E6A323BECA3200C38973 /* WonderfullIndonesia */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4274E6CC23BECA3300C38973 /* Build configuration list for PBXNativeTarget "WonderfullIndonesia" */;
@@ -505,10 +556,14 @@
 		4274E69C23BECA3200C38973 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = WonderfullIndonesia;
 				TargetAttributes = {
+					11423EA227AE99EF00EE9C6F = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 4274E6A323BECA3200C38973;
+					};
 					4274E6A323BECA3200C38973 = {
 						CreatedOnToolsVersion = 10.3;
 						LastSwiftMigration = 1030;
@@ -529,11 +584,19 @@
 			projectRoot = "";
 			targets = (
 				4274E6A323BECA3200C38973 /* WonderfullIndonesia */,
+				11423EA227AE99EF00EE9C6F /* WonderfullIndonesiaUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		11423EA127AE99EF00EE9C6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4274E6A223BECA3200C38973 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -603,6 +666,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		11423E9F27AE99EF00EE9C6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11423EA627AE99EF00EE9C6F /* WonderfullIndonesiaUITests.swift in Sources */,
+				11423EA827AE99EF00EE9C6F /* WonderfullIndonesiaUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4274E6A023BECA3200C38973 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -619,7 +691,7 @@
 				1125B70C23E820300015720C /* UIImage.swift in Sources */,
 				9EF9905423CDBE73005AD51E /* KeychainSwift.swift in Sources */,
 				11DBE63C23E2A9980050937F /* UIColor.swift in Sources */,
-				9E7372FF23E80DCD00C6C207 /* BuildFile in Sources */,
+				9E7372FF23E80DCD00C6C207 /* (null) in Sources */,
 				9EF9904E23CDBE73005AD51E /* ApiFactory.swift in Sources */,
 				114E5822278A5AAD0013D38E /* BigCardTableViewCell.swift in Sources */,
 				1109DE4D279BFA0700B62295 /* Utils.swift in Sources */,
@@ -629,7 +701,7 @@
 				9EF9905523CDBE73005AD51E /* Notifications.swift in Sources */,
 				9EF9905023CDBE73005AD51E /* UserDefaults.swift in Sources */,
 				114E581A278959F30013D38E /* HomeViewController.swift in Sources */,
-				9E73730023E80E0300C6C207 /* BuildFile in Sources */,
+				9E73730023E80E0300C6C207 /* (null) in Sources */,
 				1109DE8C279E56DB00B62295 /* ShortProfileTableViewCell.swift in Sources */,
 				9E371A5823E3260F0005F269 /* UIViewController.swift in Sources */,
 				9EF9905723CDBE73005AD51E /* Persistent.swift in Sources */,
@@ -653,6 +725,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		11423EAA27AE99EF00EE9C6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4274E6A323BECA3200C38973 /* WonderfullIndonesia */;
+			targetProxy = 11423EA927AE99EF00EE9C6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		11BCB5BF26CF96A5006E72FE /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
@@ -665,6 +745,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		11423EAB27AE99EF00EE9C6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S39WRXUKHC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.arifrach.WonderfullIndonesiaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WonderfullIndonesia;
+			};
+			name = Debug;
+		};
+		11423EAC27AE99EF00EE9C6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S39WRXUKHC;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.arifrach.WonderfullIndonesiaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WonderfullIndonesia;
+			};
+			name = Release;
+		};
 		4274E6CA23BECA3300C38973 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -837,6 +965,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		11423EAD27AE99EF00EE9C6F /* Build configuration list for PBXNativeTarget "WonderfullIndonesiaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11423EAB27AE99EF00EE9C6F /* Debug */,
+				11423EAC27AE99EF00EE9C6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4274E69F23BECA3200C38973 /* Build configuration list for PBXProject "WonderfullIndonesia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
