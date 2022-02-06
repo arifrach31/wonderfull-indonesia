@@ -19,7 +19,7 @@ jobs:
       - name: Install Dependencies
         run: |
          cd WonderfullIndonesia
-         pod deintegrate
+         pod deintegrate WonderfullIndonesia.xcodeproj
          pod install --repo-update
 
   swift_lint:
