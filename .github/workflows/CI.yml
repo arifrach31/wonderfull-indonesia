@@ -37,7 +37,9 @@ jobs:
 
       - name: Install Swiftlint
         if: steps.swift-lint.outputs.cache-hit != 'true'
-        run: brew install swiftlint
+        run: |
+           rm '/usr/local/bin/swiftlint'
+           brew install swiftlint
 
       - name: Run Swiftlint
         run: swiftlint
