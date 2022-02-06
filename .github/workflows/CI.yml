@@ -7,12 +7,25 @@ on:
   pull_request:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   build:
-    name: Setup Cocoapods
-    runs-on: macos-latest
+    runs-on: macOS-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: NiftyStack/install-cocoapods-action@1.0.0
-      - run: pod install
+     - uses: actions/checkout@v2
+     - name: List available Xcode versions
+       run: ls /Applications | grep Xcode
+
+     - name: Run a one-line script
+       run: sudo xcode-select -switch /Applications/Xcode_12.1.app && /usr/bin/xcodebuild -version
+     
+     - name: Install Dependencies
+       run: |
+         cd WonderfullIndonesia
+         pod install --repo-update
+
+     - name: Run a multi-line script
+       run: |
+          cd WonderfullIndonesia
+          xcodebuild test -workspace WonderfullIndonesia.xcworkspace -scheme WonderfullIndonesia -destination "platform=iOS Simulator,name=iPhone 11 Pro,OS=14.5"
