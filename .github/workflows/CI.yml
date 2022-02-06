@@ -10,6 +10,16 @@ on:
   workflow_dispatch:
 
 jobs:
+  clean_derived_data:
+    name: Clean Derived Data
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Clean Derived Data
+        run: |
+         rm -rf ~/Library/Developer/Xcode/DerivedData
+         echo "Removed all derived data."
+
   install_dependency:
     name: Install dependency
     runs-on: macOS-latest
@@ -18,7 +28,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install Dependencies
         run: |
-         pod deintegrate WonderfullIndonesia.xcodeproj
+         pod deintegrate
          pod install --repo-update
 
   swift_lint:
