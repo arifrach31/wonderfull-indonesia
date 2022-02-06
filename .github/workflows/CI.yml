@@ -10,8 +10,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  clean_derived_data:
-    name: Clean Derived Data
+  tests:
+    name: WonderfullIndonesia Tests
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
@@ -20,23 +20,10 @@ jobs:
          rm -rf ~/Library/Developer/Xcode/DerivedData
          echo "Removed all derived data."
 
-  install_dependency:
-    name: Install dependency
-    runs-on: macOS-latest
-
-    steps:
-      - uses: actions/checkout@v2
       - name: Install Dependencies
         run: |
          pod deintegrate
          pod install --repo-update
-
-  swift_lint:
-    name: SwiftLint
-    runs-on: macOS-latest
-
-    steps:
-      - uses: actions/checkout@v2
 
       - name: Cache Swiftlint
         id: swift-lint
@@ -44,26 +31,18 @@ jobs:
         with:
           path: vendor/bundle
           key: ${{ runner.os }}-swiftlint
-
       - name: Install Swiftlint
         if: steps.swift-lint.outputs.cache-hit != 'true'
         run: |
            rm '/usr/local/bin/swiftlint'
            brew install swiftlint
-
       - name: Run Swiftlint
         run: swiftlint
 
-  build:
-    runs-on: macOS-latest
-    steps:
-     - uses: actions/checkout@v2
-     - name: List available Xcode versions
+      - name: List available Xcode versions
        run: ls /Applications | grep Xcode
-
-     - name: Run a one-line script
+       - name: Run a one-line script
        run: sudo xcode-select -switch /Applications/Xcode_13.1.app && /usr/bin/xcodebuild -version
-
-     - name: Run a multi-line script
+      - name: Run a multi-line script
        run: |
           xcodebuild test -workspace WonderfullIndonesia.xcworkspace -scheme WonderfullIndonesia -destination "platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0"
