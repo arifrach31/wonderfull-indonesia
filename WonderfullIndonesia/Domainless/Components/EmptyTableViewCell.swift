@@ -8,6 +8,7 @@
 
 import UIKit
 import Reusable
+import Common
 
 class EmptyTableViewCell: UITableViewCell, NibReusable {
   
@@ -24,6 +25,7 @@ class EmptyTableViewCell: UITableViewCell, NibReusable {
 
   func configureViews() {
     btnEmpty.layer.borderColor = UIColor.primaryColor.cgColor
+    imgEmpty.image = UIImage.iconFindPlace
   }
 
   @IBAction func didTapBtnEmpty(_ sender: Any) {

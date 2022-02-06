@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Core
 
 protocol FavoriteInteractorProtocol: AnyObject {
   func currentDestination() -> Destination?

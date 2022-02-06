@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Core
 
 class DetailViewController: UIViewController {
 
@@ -17,6 +18,7 @@ class DetailViewController: UIViewController {
   @IBOutlet weak var lblDetail: UILabel!
   @IBOutlet weak var lblLocation: UILabel!
   @IBOutlet weak var imgFavorite: UIImageView!
+  @IBOutlet weak var imgLocation: UIImageView!
   
   private let place: Place?
   private let viewModel: DetailViewModel
@@ -77,6 +79,7 @@ class DetailViewController: UIViewController {
     imgFavorite.isUserInteractionEnabled = true
     imgFavorite.addGestureRecognizer(tapGestureRecognizer)
     
+    imgLocation.image = UIImage.iconLocation
     tableView.dataSource = self
     
     tableView.register(cellType: OverviewTableViewCell.self)

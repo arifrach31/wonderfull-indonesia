@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class Encryption {
   static let keyData     = "f86618ad845d380e742cdacbead684b0".data(using: String.Encoding.utf8)!

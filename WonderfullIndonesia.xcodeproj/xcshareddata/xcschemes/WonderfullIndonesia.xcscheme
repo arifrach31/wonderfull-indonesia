@@ -51,7 +51,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9EF9906D23CDC0B2005AD51E"
+               BlueprintIdentifier = "11423EA227AE99EF00EE9C6F"
                BuildableName = "WonderfullIndonesiaUITests.xctest"
                BlueprintName = "WonderfullIndonesiaUITests"
                ReferencedContainer = "container:WonderfullIndonesia.xcodeproj">
@@ -63,6 +63,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = ""
       selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
+      language = "en"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"

@@ -9,25 +9,26 @@
 import UIKit
 import SnapKit
 import ShimmerSwift
+import Core
 
 // MARK: - Handle NavigationBar
 
-enum NavigationBarType {
+public enum NavigationBarType {
   case backAndTitle(title: String?, color: UIColor?, backColor: UIColor)
   case centerTitle(title: String?, titleSize: CGFloat?, titleColor: UIColor?)
   case backAndSearch(txtField: UISearchBar?, backColor: UIColor)
 }
 
-protocol NavigationBarButtonHandler {
+public protocol NavigationBarButtonHandler {
   func rightNavigationBarButtonTapped(sender: UIBarButtonItem?)
   func leftNavigationBarButtonTapped(sender: UIBarButtonItem?)
 }
 
-extension UIViewController {
+public extension UIViewController {
   private func setDefaultNavigationTheme() {
     navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     navigationController?.navigationBar.shadowImage = UIImage()
-    navigationController?.navigationBar.barTintColor  = .primaryViewBackgroundColor
+    navigationController?.navigationBar.barTintColor  = UIColor.primaryViewBackgroundColor
     navigationController?.interactivePopGestureRecognizer?.delegate = nil
   }
 
@@ -101,7 +102,7 @@ extension UIViewController {
 }
 
 extension UIViewController: NavigationBarButtonHandler {
-  @objc func rightNavigationBarButtonTapped(sender: UIBarButtonItem?) {
+  @objc open func rightNavigationBarButtonTapped(sender: UIBarButtonItem?) {
     let transition = CATransition()
     transition.duration = 0.3
     transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
@@ -109,7 +110,7 @@ extension UIViewController: NavigationBarButtonHandler {
     self.navigationController?.view.layer.add(transition, forKey: nil)
   }
 
-  @objc func leftNavigationBarButtonTapped(sender: UIBarButtonItem?) {
+  @objc open func leftNavigationBarButtonTapped(sender: UIBarButtonItem?) {
     let transition = CATransition()
     transition.duration = 0.3
     transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
@@ -120,23 +121,23 @@ extension UIViewController: NavigationBarButtonHandler {
 
 // MARK: - Handle Alert
 
-extension UIViewController {
+public extension UIViewController {
   func showAlert(title: String?, message: String) {
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-    alert.addAction(UIAlertAction(title: "ok".localized(), style: .destructive, handler: nil))
+    alert.addAction(UIAlertAction(title: "ok".localized(identifier: "com.wonderfull.indonesia.Common"), style: .destructive, handler: nil))
     present(alert, animated: true, completion: nil)
   }
 }
 
 // MARK: - Handle Error API
 
-extension UIViewController {
+public extension UIViewController {
   func handleError(error: ApiError?) {
     guard let apiError = error else {
       return
     }
 
-    showAlert(title: "failed".localized(), message: apiError.localizedDescription)
+    showAlert(title: "failed".localized(identifier: "com.wonderfull.indonesia.Common"), message: apiError.localizedDescription)
   }
 }
 

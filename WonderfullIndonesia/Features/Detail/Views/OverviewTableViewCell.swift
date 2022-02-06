@@ -8,9 +8,14 @@
 
 import UIKit
 import Reusable
+import Common
 
 class OverviewTableViewCell: UITableViewCell, NibReusable {
 
+  @IBOutlet weak var imgFavorite: UIImageView!
+  @IBOutlet weak var imgWeather: UIImageView!
+  @IBOutlet weak var imgPriceTag: UIImageView!
+  
   @IBOutlet weak var lblLike: UILabel!
   @IBOutlet weak var lblDescription: UILabel!
   @IBOutlet weak var lblWeather: UILabel!
@@ -22,6 +27,18 @@ class OverviewTableViewCell: UITableViewCell, NibReusable {
     }
   }
 
+  override func awakeFromNib() {
+    super.awakeFromNib()
+
+    configureViews()
+  }
+
+  func configureViews() {
+    imgFavorite.image = UIImage.iconFavoritActive
+    imgWeather.image = UIImage.iconWeather
+    imgPriceTag.image = UIImage.iconPriceTag
+  }
+  
   func setContent() {
     lblLike.text = "\(item?.like ?? 0)"
     lblDescription.text = item?.description ?? "-"

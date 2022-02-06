@@ -10,13 +10,13 @@ import Foundation
 import Moya
 
 let _baseURL = URL(string: "https://run.mocky.io/v3/")!
-enum BaseApi {
+public enum BaseApi {
   case destination
   case about
 }
 
 extension BaseApi: TargetType {
-  var baseURL: URL {
+  public var baseURL: URL {
     #if DEVELOPMENT
       return baseURL
     #else
@@ -24,7 +24,7 @@ extension BaseApi: TargetType {
     #endif
   }
   
-  var path: String {
+  public var path: String {
     switch self {
     case .destination:
       return "342592cf-516c-4722-b018-d27b3aab1984"
@@ -33,18 +33,18 @@ extension BaseApi: TargetType {
     }
   }
   
-  var method: Moya.Method {
+  public var method: Moya.Method {
     switch self {
     default:
       return .get
     }
   }
   
-  var sampleData: Data {
+  public var sampleData: Data {
     return Data()
   }
   
-  var task: Task {
+  public var task: Task {
     switch self {
     default:
       return .requestParameters(parameters: [:],
@@ -52,7 +52,7 @@ extension BaseApi: TargetType {
     }
   }
   
-  var headers: [String: String]? {
+  public var headers: [String: String]? {
     switch self {
     default:
       return getHeaders(type: .authorized)

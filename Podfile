@@ -1,20 +1,36 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '14.5'
+workspace 'WonderfullIndonesia'
+use_frameworks!
+
+def shared_pods
+  pod 'SnapKit'
+  pod 'ShimmerSwift'
+end
 
 target 'WonderfullIndonesia' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
+  shared_pods
   pod 'Moya', '~> 13.0.1'
   pod 'ObjectMapper'
+  pod 'netfox'
+  pod 'SwiftLint'
   pod 'RxCocoa'
   pod 'netfox'
   pod 'SVProgressHUD'
   pod 'Kingfisher'
   pod 'Reusable'
-  pod 'SnapKit'
-  pod 'Localize-Swift', '~> 2.0'
-  pod 'ShimmerSwift'
-  pod 'SwiftLint'
+end
 
+target 'Common' do 
+  shared_pods
+
+  project 'Modules/Common/Common'
+end
+
+target 'Core' do 
+  pod 'Moya', '~> 13.0.1'
+  pod 'ObjectMapper'
+  pod 'RxCocoa'
+  pod 'netfox'
+
+  project 'Modules/Core/Core'
 end

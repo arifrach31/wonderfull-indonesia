@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum PersistentKey: String, StorageTypeProtocol {
+public enum PersistentKey: String, StorageTypeProtocol {
   case deviceID         = "deviceID"
   case sessionID        = "session_id"
   case destination      = "destination"
@@ -52,11 +52,11 @@ enum PersistentStorageType {
   case keychain
 }
 
-struct Persistent {
-  static let shared = Persistent()
+public struct Persistent {
+  public static let shared = Persistent()
   private let keychain = KeychainSwift()
   
-  func set(key: PersistentKey, value: String) {
+  public func set(key: PersistentKey, value: String) {
     let storage = key.storageType
     
     if storage == .keychain {
@@ -66,7 +66,7 @@ struct Persistent {
     }
   }
   
-  func get(key: PersistentKey) -> String? {
+  public func get(key: PersistentKey) -> String? {
     let storage = key.storageType
     
     if storage == .keychain {
@@ -76,7 +76,7 @@ struct Persistent {
     }
   }
   
-  func delete(key: PersistentKey) {
+  public func delete(key: PersistentKey) {
     let storage = key.storageType
     
     if storage == .keychain {

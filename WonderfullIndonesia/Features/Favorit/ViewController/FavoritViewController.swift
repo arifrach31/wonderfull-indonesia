@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Core
 
 class FavoritViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
@@ -36,7 +37,9 @@ class FavoritViewController: UIViewController {
   }
 
   override func viewWillAppear(_ animated: Bool) {
-    setNavigationBar(type: .centerTitle(title: "favorite_destination".localized(), titleSize: 18.0, titleColor: .secondaryColor))
+    setNavigationBar(type: .centerTitle(title: "favorite_destination".localized(identifier:
+                                                                                  "com.wonderfull.indonesia.Common"),
+                                        titleSize: 18.0, titleColor: .secondaryColor))
   }
 
   override func viewDidLayoutSubviews() {
@@ -85,7 +88,7 @@ extension FavoritViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     if viewModel.isEmptyResult(viewModel.countFavoritDestination) {
       let cell: EmptyTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-      cell.lblEmpty.text = "find_destination".localized()
+      cell.lblEmpty.text = "find_destination".localized(identifier: "com.wonderfull.indonesia.Common")
       cell.lblEmpty.textColor = .greyColor
       cell.btnEmpty.isHidden = false
       cell.selectionHandler = { [weak self] in

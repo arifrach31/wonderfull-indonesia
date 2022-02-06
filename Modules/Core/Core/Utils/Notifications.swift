@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct Notifications {
-  static let favoritNotifications = NSNotification.Name(rawValue: "favoritNotifications")
+public struct Notifications {
+  public static let favoritNotifications = NSNotification.Name(rawValue: "favoritNotifications")
 }
 
 public extension NSNotification.Name {

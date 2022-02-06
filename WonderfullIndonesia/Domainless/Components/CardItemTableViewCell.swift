@@ -8,10 +8,13 @@
 
 import UIKit
 import Reusable
+import Common
 
 class CardItemTableViewCell: UITableViewCell, NibReusable {
 
   @IBOutlet weak var imgPlace: UIImageView!
+  @IBOutlet weak var imgFavorite: UIImageView!
+  @IBOutlet weak var imgLocation: UIImageView!
   @IBOutlet weak var lblPlace: UILabel!
   @IBOutlet weak var lblLike: UILabel!
   @IBOutlet weak var lblAddress: UILabel!
@@ -23,6 +26,17 @@ class CardItemTableViewCell: UITableViewCell, NibReusable {
     didSet {
       setContent()
     }
+  }
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+
+    configureViews()
+  }
+
+  func configureViews() {
+    imgFavorite.image = UIImage.iconFavoritActive
+    imgLocation.image = UIImage.iconLocation
   }
 
   func setContent() {

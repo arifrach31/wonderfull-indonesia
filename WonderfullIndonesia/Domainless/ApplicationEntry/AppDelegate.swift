@@ -8,7 +8,7 @@
 
 import UIKit
 import netfox
-import Localize_Swift
+import Common
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

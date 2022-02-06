@@ -10,9 +10,11 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SVProgressHUD
+import Core
 
 class SearchViewController: UIViewController, UISearchBarDelegate {
-  
+
+  @IBOutlet weak var imgCover: UIImageView!
   @IBOutlet weak var tableView: UITableView!
 
   private let searchBar: UISearchBar = UISearchBar()
@@ -64,6 +66,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
   }
 
   func configureViews() {
+    imgCover.image = UIImage.coverSearch
     searchBar.delegate = self
     tableView.delegate = self
     tableView.dataSource = self
@@ -114,7 +117,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
       textfield.font = .systemFont(ofSize: 16)
     }
 
-    searchBar.placeholder = "search".localized()
+    searchBar.placeholder = "search".localized(identifier: "com.wonderfull.indonesia.Common")
     searchBar.barTintColor = UIColor.clear
     searchBar.backgroundColor = UIColor.clear
     searchBar.isTranslucent = true
@@ -151,8 +154,12 @@ extension SearchViewController: UITableViewDataSource {
       let cell: EmptyTableViewCell = tableView.dequeueReusableCell(for: indexPath)
       if viewModel.searchDestination.value?.count ?? 0 == 0, viewModel.searchText.value?.count == 0 {
       }
-      let text = viewModel.searchDestination.value?.count ?? 0 > 0 ? "search".localized() : viewModel.searchText.value?.count ?? 0 > 3 ?
-        "destination_not_found".localized() : "search".localized()
+      let text = viewModel.searchDestination.value?.count ?? 0 > 0 ?
+                    "search".localized(identifier: "com.wonderfull.indonesia.Common") :
+                    viewModel.searchText.value?.count ?? 0 > 3 ?
+                        "destination_not_found".localized(identifier: "com.wonderfull.indonesia.Common") :
+                        "search".localized(identifier: "com.wonderfull.indonesia.Common")
+      
       cell.lblEmpty.text = text
       cell.lblEmpty.textColor = .greyColor
       return cell

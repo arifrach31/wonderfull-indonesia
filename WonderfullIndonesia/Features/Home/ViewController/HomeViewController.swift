@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SVProgressHUD
+import Core
 
 class HomeViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
@@ -39,7 +40,9 @@ class HomeViewController: UIViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    setNavigationBar(type: .centerTitle(title: "title".localized(), titleSize: 18, titleColor: .secondaryColor))
+    setNavigationBar(type: .centerTitle(title: "title".localized(identifier:
+                                                                  "com.wonderfull.indonesia.Commn"),
+                                        titleSize: 18, titleColor: .secondaryColor))
   }
 
   override func viewDidLayoutSubviews() {
@@ -82,7 +85,7 @@ class HomeViewController: UIViewController {
     viewModel.destination.asObservable().subscribe(onNext: { [weak self] response in
       guard let result = response else { return }
 
-      Persistent.shared.set(key: .firstInstall, value: "ok".localized())
+      Persistent.shared.set(key: .firstInstall, value: "ok".localized(identifier: "com.wonderfull.indonesia.Commn"))
       self?.viewModel.interactor.save(destination: result)
       self?.tableView.reloadData()
     }).disposed(by: disposeBag)
@@ -143,7 +146,7 @@ extension HomeViewController: UITableViewDelegate {
     let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderTableViewCell.reuseIdentifier) as? HeaderTableViewCell
     switch section {
     case 1:
-      header?.lblHeader.text = "recomendation".localized()
+      header?.lblHeader.text = "recomendation".localized(identifier: "com.wonderfull.indonesia.Common")
       return header
     default:
       return nil

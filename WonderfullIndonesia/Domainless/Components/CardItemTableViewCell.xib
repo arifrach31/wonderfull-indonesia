@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,7 +36,7 @@
                         <color key="textColor" red="0.16862745098039217" green="0.27450980392156865" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-favorit-active" translatesAutoresizingMaskIntoConstraints="NO" id="MV8-7d-ZJ8">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MV8-7d-ZJ8">
                         <rect key="frame" x="32" y="284" width="14" height="14"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
                         <constraints>
@@ -50,7 +50,7 @@
                         <color key="textColor" red="0.48627450980392156" green="0.5607843137254902" blue="0.6705882352941176" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-location" translatesAutoresizingMaskIntoConstraints="NO" id="F67-s0-FOg">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F67-s0-FOg">
                         <rect key="frame" x="79.5" y="283.5" width="22" height="15"/>
                         <color key="tintColor" systemColor="systemRedColor"/>
                         <constraints>
@@ -101,6 +101,7 @@
                     <constraint firstItem="MV8-7d-ZJ8" firstAttribute="top" secondItem="vH6-Nd-FV5" secondAttribute="bottom" constant="10" id="On6-fW-OUM"/>
                     <constraint firstItem="7N4-YQ-w9b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="QAV-hP-zHv"/>
                     <constraint firstItem="F67-s0-FOg" firstAttribute="leading" secondItem="Ucb-f0-udt" secondAttribute="trailing" constant="14" id="QxH-c1-H1u"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="kW6-yf-6ev" secondAttribute="trailing" constant="16" id="TCn-cI-4rg"/>
                     <constraint firstAttribute="trailing" secondItem="vH6-Nd-FV5" secondAttribute="trailing" constant="32" id="cWx-9A-u3Y"/>
                     <constraint firstItem="7N4-YQ-w9b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="fFb-pe-Gd6"/>
                     <constraint firstItem="F67-s0-FOg" firstAttribute="centerY" secondItem="MV8-7d-ZJ8" secondAttribute="centerY" id="fNe-0w-wMp"/>
@@ -115,7 +116,9 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="btnFav" destination="eei-Ga-Pyv" id="kkX-o3-iVh"/>
+                <outlet property="imgFavorite" destination="MV8-7d-ZJ8" id="vGy-zO-WOi"/>
                 <outlet property="imgIconFav" destination="XKg-Zv-TBR" id="Xa8-9D-oMl"/>
+                <outlet property="imgLocation" destination="F67-s0-FOg" id="3pW-di-nwh"/>
                 <outlet property="imgPlace" destination="7N4-YQ-w9b" id="MYA-R4-Do6"/>
                 <outlet property="lblAddress" destination="kW6-yf-6ev" id="Cw0-3Q-Qjs"/>
                 <outlet property="lblLike" destination="Ucb-f0-udt" id="6g1-d0-Kxy"/>
@@ -125,8 +128,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="icon-favorit-active" width="36" height="36"/>
-        <image name="icon-location" width="256" height="256"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

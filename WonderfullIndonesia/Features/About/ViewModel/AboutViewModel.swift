@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Core
 
 class AboutViewModel {
   var isLoading: BehaviorRelay<Bool>
