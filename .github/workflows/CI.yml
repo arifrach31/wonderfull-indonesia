@@ -27,5 +27,4 @@ jobs:
 
      - name: Run a multi-line script
        run: |
-          cd WonderfullIndonesia
-          xcodebuild test -workspace WonderfullIndonesia/WonderfullIndonesia.xcworkspace -scheme WonderfullIndonesia -destination "platform=iOS Simulator,name=iPhone 11 Pro,OS=14.5"
+          xcodebuild test -workspace WonderfullIndonesia.xcworkspace -scheme WonderfullIndonesia -destination "platform=iOS Simulator,name=iPhone 11 Pro,OS=14.5"
