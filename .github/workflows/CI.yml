@@ -11,8 +11,9 @@ on:
 
 jobs:
   tests:
-    name: WonderfullIndonesia Tests
+    name: Tests
     runs-on: macOS-latest
+    
     steps:
       - uses: actions/checkout@v2
       - name: Clean Derived Data
