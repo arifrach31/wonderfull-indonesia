@@ -13,7 +13,7 @@ jobs:
   tests:
     name: Tests
     runs-on: macOS-latest
-    
+
     steps:
       - uses: actions/checkout@v2
       - name: Clean Derived Data
@@ -41,9 +41,9 @@ jobs:
         run: swiftlint
 
       - name: List available Xcode versions
-       run: ls /Applications | grep Xcode
-       - name: Run a one-line script
-       run: sudo xcode-select -switch /Applications/Xcode_13.1.app && /usr/bin/xcodebuild -version
+        run: ls /Applications | grep Xcode
+      - name: Run a one-line script
+        run: sudo xcode-select -switch /Applications/Xcode_13.1.app && /usr/bin/xcodebuild -version
       - name: Run a multi-line script
-       run: |
-          xcodebuild test -workspace WonderfullIndonesia.xcworkspace -scheme WonderfullIndonesia -destination "platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0"
+        run: |
+           xcodebuild test -workspace WonderfullIndonesia.xcworkspace -scheme WonderfullIndonesia -destination "platform=iOS Simulator,name=iPhone 11 Pro,OS=15.0"
