@@ -36,6 +36,7 @@ class FavoriteInteractor: FavoriteInteractorProtocol {
     var isFavorit: Bool = false
     var destination = destination
     for i in 0..<(destination.count ?? 0) {
+      // swiftlint:disable for_where
       if destination.places?[i].id == id {
         isFavorit = destination.places?[i].isFavorit ?? false ? true : false
         destination.places?[i].isFavorit = !isFavorit

@@ -52,7 +52,7 @@ extension BaseApi: TargetType {
     }
   }
   
-  var headers: [String : String]? {
+  var headers: [String: String]? {
     switch self {
     default:
       return getHeaders(type: .authorized)
@@ -109,6 +109,7 @@ extension BaseApi {
   }
   
   var composedUrl: URL? {
+    // swiftlint:disable implicit_getter
     get {
       let endpoint = endpointClosure(self)
       

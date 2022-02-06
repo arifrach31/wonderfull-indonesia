@@ -12,7 +12,7 @@ extension UserDefaults {
   static func get(_ key: String) -> String? {
     let val = UserDefaults.standard.value(forKey: key)
     if let v = val as? String {
-      return Encryption.decrypt(param:v)
+      return Encryption.decrypt(param: v)
     }
     
     return nil

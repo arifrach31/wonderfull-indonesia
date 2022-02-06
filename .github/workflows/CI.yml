@@ -10,6 +10,38 @@ on:
   workflow_dispatch:
 
 jobs:
+  install_dependency:
+    name: Install dependency
+    runs-on: macOS-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: |
+         cd WonderfullIndonesia
+         pod install --repo-update
+
+  swift_lint:
+    name: SwiftLint
+    runs-on: macOS-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Cache Swiftlint
+        id: swift-lint
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-swiftlint
+
+      - name: Install Swiftlint
+        if: steps.swift-lint.outputs.cache-hit != 'true'
+        run: brew install swiftlint
+
+      - name: Run Swiftlint
+        run: swiftlint
+
   build:
     runs-on: macOS-latest
     steps:
@@ -19,11 +51,6 @@ jobs:
 
      - name: Run a one-line script
        run: sudo xcode-select -switch /Applications/Xcode_13.1.app && /usr/bin/xcodebuild -version
-     
-     - name: Install Dependencies
-       run: |
-         cd WonderfullIndonesia
-         pod install --repo-update
 
      - name: Run a multi-line script
        run: |

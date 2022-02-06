@@ -27,7 +27,7 @@ class SearchViewModel {
   }
   
   func isEmptyResult(_ countResult: Int) -> Bool {
-    if (countResult < 1) {
+    if countResult < 1 {
       return true
     }
     return false

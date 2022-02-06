@@ -54,7 +54,8 @@ class HomeViewController: UIViewController {
   }
 
   private func reqDestination() {
-    guard let _ = Persistent.shared.get(key: .firstInstall) else {
+    let firstInstall = Persistent.shared.get(key: .firstInstall)
+    guard firstInstall != nil else {
       viewModel.requestDestination()
       return
     }
@@ -103,7 +104,7 @@ class HomeViewController: UIViewController {
   }
 }
 
-extension HomeViewController:  UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource {
   func numberOfSections(in tableView: UITableView) -> Int {
     return 2
   }
@@ -137,7 +138,7 @@ extension HomeViewController:  UITableViewDataSource {
   }
 }
 
-extension HomeViewController:  UITableViewDelegate {
+extension HomeViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderTableViewCell.reuseIdentifier) as? HeaderTableViewCell
     switch section {

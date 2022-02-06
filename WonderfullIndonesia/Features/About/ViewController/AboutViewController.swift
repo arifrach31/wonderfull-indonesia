@@ -66,7 +66,7 @@ class AboutViewController: UIViewController {
       self?.handleError(error: error)
     }).disposed(by: disposeBag)
 
-    viewModel.about.asObservable().subscribe(onNext: { [weak self] response in
+    viewModel.about.asObservable().subscribe(onNext: { [weak self] _ in
       self?.tableView.reloadData()
     }).disposed(by: disposeBag)
   }

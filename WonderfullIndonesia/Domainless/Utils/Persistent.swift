@@ -15,6 +15,7 @@ enum PersistentKey: String, StorageTypeProtocol {
   case firstInstall     = "first_install"
   
   var storageType: PersistentStorageType {
+    // swiftlint:disable implicit_getter
     get {
       switch self {
       case .deviceID:

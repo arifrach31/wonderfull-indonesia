@@ -12,7 +12,7 @@ import ObjectMapper
 struct About: Mappable {
   var error: Bool?
   var message: String?
-  var data: Me?
+  var data: Profile?
 
   init?(map: Map) {
     mapping(map: map)
@@ -26,7 +26,7 @@ struct About: Mappable {
 }
 
 // MARK: - Me
-struct Me: Mappable {
+struct Profile: Mappable {
   var id: Int?
   var name, job, company,
       instagram, image: String?

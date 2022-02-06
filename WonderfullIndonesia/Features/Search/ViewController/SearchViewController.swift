@@ -73,14 +73,14 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
   }
 
   func observeViewModel() {
-    viewModel.searchDestination.asObservable().subscribe(onNext: { [weak self] response in
+    viewModel.searchDestination.asObservable().subscribe(onNext: { [weak self] _ in
       self?.tableView.reloadData()
     }).disposed(by: disposeBag)
 
     viewModel.searchText.asObservable().subscribe(onNext: { [weak self] response in
       guard let result = response else { return }
       if result.count >= 3 {
-        let destination = self?.viewModel.interactor.currentDestination()?.places?.filter{ (data) -> Bool in
+        let destination = self?.viewModel.interactor.currentDestination()?.places?.filter { (data) -> Bool in
           data.name?.lowercased().contains(result) ?? false
         }
         self?.viewModel.searchDestination.accept(destination)
@@ -91,7 +91,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
 
     NotificationCenter.default.rx
       .notification(Notifications.favoritNotifications).subscribe(onNext: {[weak self] _ in
-        let destination = self?.viewModel.interactor.currentDestination()?.places?.filter{ (data) -> Bool in
+        let destination = self?.viewModel.interactor.currentDestination()?.places?.filter { (data) -> Bool in
           data.name?.lowercased().contains(self?.viewModel.searchText.value ?? "") ?? false
         }
         self?.viewModel.searchDestination.accept(destination)
@@ -147,7 +147,7 @@ extension SearchViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    if viewModel.isEmptyResult(viewModel.countSearchDestination)  {
+    if viewModel.isEmptyResult(viewModel.countSearchDestination) {
       let cell: EmptyTableViewCell = tableView.dequeueReusableCell(for: indexPath)
       if viewModel.searchDestination.value?.count ?? 0 == 0, viewModel.searchText.value?.count == 0 {
       }

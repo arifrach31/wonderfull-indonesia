@@ -14,7 +14,8 @@ struct Constants {
   static let applicationBuildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "0"
   static let iosVersion = UIDevice.current.systemVersion
     
-  static var deviceIdentifier : String {
+  static var deviceIdentifier: String {
+    // swiftlint:disable implicit_getter
     get {
       if let uid = Persistent.shared.get(key: .deviceID) {
         return uid

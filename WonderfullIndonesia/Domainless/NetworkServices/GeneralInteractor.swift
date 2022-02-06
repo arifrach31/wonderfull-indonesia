@@ -10,7 +10,7 @@ import ObjectMapper
 import RxSwift
 
 struct GeneralInteractor {
-  static func api<T:Mappable>(_ api: BaseApi, responseType: T.Type) -> Observable<T> {
+  static func api<T: Mappable>(_ api: BaseApi, responseType: T.Type) -> Observable<T> {
     return NetworkService.shared.connect(api: api, mappableType: responseType)
   }
 }

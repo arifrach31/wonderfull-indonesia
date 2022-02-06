@@ -36,9 +36,12 @@ class HomeTabBarViewController: UITabBarController {
     tabBar.clipsToBounds = true
     tabBar.barTintColor = .white
     
-    let homeController = createTabController(vc: HomeViewController(viewModel: HomeViewModel()), active: UIImage.iconHomeActive!, inactive: UIImage.iconHomeInactive!)
-    let favoritController = createTabController(vc: FavoritViewController(viewModel: FavoriteViewModel()), active: UIImage.iconFavoritActive!, inactive: UIImage.iconFavoritInactive!)
-    let accountController = createTabController(vc: AboutViewController(viewModel: AboutViewModel()), active: UIImage.iconAboutActive!, inactive: UIImage.iconAboutInactive!)
+    let homeController = createTabController(vc: HomeViewController(viewModel: HomeViewModel()),
+                                             active: UIImage.iconHomeActive!, inactive: UIImage.iconHomeInactive!)
+    let favoritController = createTabController(vc: FavoritViewController(viewModel: FavoriteViewModel()),
+                                                active: UIImage.iconFavoritActive!, inactive: UIImage.iconFavoritInactive!)
+    let accountController = createTabController(vc: AboutViewController(viewModel: AboutViewModel()),
+                                                active: UIImage.iconAboutActive!, inactive: UIImage.iconAboutInactive!)
     
     viewControllers = [homeController, favoritController, accountController]
   }
@@ -53,8 +56,10 @@ extension UITabBarController {
     tabController.tabBarItem.imageInsets = UIEdgeInsets(top: 8, left: 0, bottom: -8, right: 0)
     tabController.tabBarItem.title = "•"
     tabController.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0.0, vertical: 2.0)
-    tabController.tabBarItem.setTitleTextAttributes([.foregroundColor: UIColor.white, NSAttributedString.Key.font:UIFont.systemFont(ofSize: 26)], for: .normal)
-    tabController.tabBarItem.setTitleTextAttributes([.foregroundColor: UIColor.primaryColor, NSAttributedString.Key.font:UIFont.systemFont(ofSize: 26)], for: .selected)
+    tabController.tabBarItem.setTitleTextAttributes([.foregroundColor: UIColor.white,
+                                                     NSAttributedString.Key.font: UIFont.systemFont(ofSize: 26)], for: .normal)
+    tabController.tabBarItem.setTitleTextAttributes([.foregroundColor: UIColor.primaryColor,
+                                                     NSAttributedString.Key.font: UIFont.systemFont(ofSize: 26)], for: .selected)
     
     return tabController
   }

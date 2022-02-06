@@ -15,7 +15,7 @@ class ShortProfileTableViewCell: UITableViewCell, NibReusable {
   @IBOutlet weak var lblName: UILabel!
   @IBOutlet weak var lblJob: UILabel!
   
-  var data: Me? {
+  var data: Profile? {
     didSet {
       setContent()
     }

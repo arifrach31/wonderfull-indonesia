@@ -25,9 +25,9 @@ protocol NavigationBarButtonHandler {
 
 extension UIViewController {
   private func setDefaultNavigationTheme() {
-    navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     navigationController?.navigationBar.shadowImage = UIImage()
-    navigationController?.navigationBar.barTintColor  = .masterViewBackgroundColor
+    navigationController?.navigationBar.barTintColor  = .primaryViewBackgroundColor
     navigationController?.interactivePopGestureRecognizer?.delegate = nil
   }
 
@@ -74,7 +74,10 @@ extension UIViewController {
   }
 
   private func createBackButton(tintColor: UIColor) -> UIBarButtonItem {
-    let backButton = UIBarButtonItem(image: UIImage.iconBackBlack, style: .plain, target: self, action: #selector(self.leftNavigationBarButtonTapped(sender:)))
+    let backButton = UIBarButtonItem(image: UIImage.iconBackBlack,
+                                     style: .plain,
+                                     target: self,
+                                     action: #selector(self.leftNavigationBarButtonTapped(sender:)))
     backButton.tintColor = tintColor
     return backButton
   }

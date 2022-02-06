@@ -18,19 +18,19 @@ extension UIColor {
     self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
   }
   
-  convenience init(netHex:Int) {
-    self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff)
+  convenience init(netHex: Int) {
+    self.init(red: (netHex >> 16) & 0xff, green: (netHex >> 8) & 0xff, blue: netHex & 0xff)
   }
   
   static let primaryColor = UIColor(netHex: 0x42A8E5)
   static let secondaryColor = UIColor(netHex: 0x2B467B)
   static let greyColor = UIColor(netHex: 0x8D8D8D)
-  static let masterViewBackgroundColor = UIColor(netHex: 0xE9F4FF)
+  static let primaryViewBackgroundColor = UIColor(netHex: 0xE9F4FF)
   static let lineColor = UIColor(netHex: 0xcccccc)
   
   static var gradientColorPrimary: CAGradientLayer {
     let grad = CAGradientLayer()
-    grad.colors = [UIColor.masterViewBackgroundColor.cgColor, UIColor.white.cgColor]
+    grad.colors = [UIColor.primaryViewBackgroundColor.cgColor, UIColor.white.cgColor]
     grad.startPoint = CGPoint(x: 0, y: 0)
     grad.endPoint = CGPoint(x: 0, y: 1)
     return grad

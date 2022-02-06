@@ -13,7 +13,7 @@ class PhotoTableViewCell: UITableViewCell, NibReusable {
 
   @IBOutlet weak var imgPhoto: UIImageView!
 
-  var data: Me? {
+  var data: Profile? {
     didSet {
       setContent()
     }
