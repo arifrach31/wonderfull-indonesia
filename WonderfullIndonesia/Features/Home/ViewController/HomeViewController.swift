@@ -58,10 +58,7 @@ class HomeViewController: UIViewController {
 
   private func reqDestination() {
     let firstInstall = Persistent.shared.get(key: .firstInstall)
-    guard firstInstall != nil else {
-      viewModel.requestDestination()
-      return
-    }
+    firstInstall == nil ? viewModel.requestDestination() : nil
   }
 
   private func configureViews() {
